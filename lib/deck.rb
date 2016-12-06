@@ -6,7 +6,7 @@ class Deck
   def initialize
     @cards = []
     populate
-    shuffle
+    shuffle!
   end
 
   def populate
@@ -22,8 +22,12 @@ class Deck
     end
   end
 
-  def shuffle
+  def shuffle!
     @cards = @cards.shuffle
+  end
+
+  def draw
+    @cards.pop
   end
 
   private
